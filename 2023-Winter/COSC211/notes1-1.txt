@@ -1,0 +1,25 @@
+1. Program Counter
+2. Instruction Register
+3. Accumulator
+
+Fetch / Execute Cycle
+The program counter is incremented by 1 every fetch/execute cycle
+
+The CPU executes the information that is contained in the Instruction Register
+
+---> Solid line means movement of data
+. . . . . . Dotted line means control signal
+
+Mnemonic (Op code)| Value (Machine Language)| Meaning (English language)
+STOP | 0  | Stop/Halt/PowerOff/PowerDown
+ LD  | 1  | Load
+ STO | 2  | Store
+ ADD | 3  | +
+ SUB | 4  | -
+ MPY | 5  | *
+ DIV | 6  | /
+ IN  | 7  | Input
+ OUT | 8  | Output
+ BR  | 9  | Branch
+ BZ  | 10 | Branch if 0
+BGTR | 11 | Branch if > 0
