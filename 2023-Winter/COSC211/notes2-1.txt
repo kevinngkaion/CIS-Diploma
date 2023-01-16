@@ -1,0 +1,39 @@
+Location Counter - The address where the next executable instrcutions will be placed in memory
+
+DC : Data Constant - Reserve some memory for the data. Thema numbers after DC are. Lets the compiler know that the next value is data
+
+Symbol Table - A linked list that stores the symbol name, mem location, value, and pointer to next cell.
+
+
+Exampe of a program
+REM MY PROGRAM
+###################
+IN ECKS
+IN WHY
+LD ECKS
+ADD WHY
+STO ZED
+OUT ZED
+STOP
+
+ECKS: DC 10
+WHY: DC -20
+ZED: DC 30
+###################
+
+First pass will translate the command so it knows where to store it based on the location counter
+Second pass will look at the data name(variable) and create a symbol table to store the symbol name, location, val, and next
+
+#Program to take 2 values and return the larger value
+REM my second program
+IN X
+IN Y
+LD X
+SUB Y
+BGTR BIGX
+OUT Y
+BR DONE
+BIGX: OUT X
+DONE: STOP
+X: DC 0
+Y: DC 0
