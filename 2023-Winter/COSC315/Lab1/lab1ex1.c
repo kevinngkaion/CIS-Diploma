@@ -11,6 +11,9 @@ int main(){
     float average = 0;
     int variance = 0;
 
+    // TODO: Use malloc to dynamically create an array and resize this array when it gets full by copying it to a new 
+    // array that is twice the size
+    
     //loop until user provides stop input
     while (input != -1){
         //prompt user for input
