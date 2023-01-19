@@ -71,4 +71,5 @@ int main(){
     printf("The Average: %10.3f \n", average);
     printf("The Variance: %7.1f \n", variance);
     free(nums);
+    return 0;
 }
