@@ -27,8 +27,10 @@ int getUserInfo(char** uname){
     int num;
     printf("Enter your first and last name: ");
     scanf("%s %s", fname, lname);
-    printf("Hello %s. Enter your lucky number (from 1 to 99): ", fname);
-    scanf("%d", &num);
+    do{
+        printf("Hello %s. Enter your lucky number (from 1 to 99): ", fname);
+        scanf("%d", &num);
+    } while(num < 1 || num > 99);
 
     //allocate memory for the username
     *uname = (char*)malloc(64*sizeof(char));
