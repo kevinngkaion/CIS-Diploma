@@ -1,3 +1,3 @@
 (eq?) - Do they share the same meory location?
-(eqv?) - Logical or functional equivalence. If we put two procedures and they produce the same result, then this would evaluate to true
+(eqv?) - Logical or functional equivalence. If we put two procedures and they produce the same result under any input, then this would evaluate to true
 (equal?) - This would evaluate to true if their output when we print them out would be the same.
