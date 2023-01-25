@@ -63,7 +63,11 @@ int main(){
     for(i = 0; i < count; i++){
         ssd = ssd + ((nums[i] - average) * (nums[i] - average));
     }
-    variance = ssd / (count - 1);
+    if(count == 1){
+        variance = 0;
+    } else {
+        variance = ssd / (count - 1);
+    }
 
     printf("The sum of %d integers is %d\n", count, sum);
     printf("The Maximum: %6d \n", max);
