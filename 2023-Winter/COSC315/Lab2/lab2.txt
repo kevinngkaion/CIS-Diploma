@@ -18,6 +18,10 @@ COSC315 Lab 2
         return 0;
     }
 
+    OUTPUT:
+    kevinngkaion
+    This happens after the system command is called
+
 2. The call of execl() overwrites the original process. In my program, the printf() function happens after the execl() call. In the output, we only get the
    result of the execl() call but the printf() statement does not run.
 
@@ -31,6 +35,9 @@ COSC315 Lab 2
         printf("This happens after the system command is called\n");
         return 0;
     }
+
+    OUTPUT:
+    kevinngkaion
 
 3. After removing the fflush() call and then running the program again, the output in the terminal was the same as the original program, where "Before fork"
    only appears once. However, when we redirect the output of the program to a file, we can see that the file has "Before fork" printed twice. 
@@ -49,6 +56,17 @@ COSC315 Lab 2
         return 0;
     }
 
+    OUTPUT IN TERMINAL:
+    Before fork
+    The value of x is 5
+    The value of x is 5
+
+    OUTPUT IN TXT FILE:
+    Before fork
+    The value of x is 5
+    Before fork
+    The value of x is 5
+
 
 4.
     #include <stdio.h>
@@ -66,6 +84,17 @@ COSC315 Lab 2
         printf("ORIGINAL PROCESS:\nMy PID is: %d\nMy parent's PID is: %d\nMy child's PID is: %d\n\n", getpid(), getppid(), pid);
         return 0;
     }
+
+    OUTPUT:
+    ORIGINAL PROCESS:
+    My PID is: 48006
+    My parent's PID is: 47826
+    My child's PID is: 48007
+
+    CHILD PROCESS:
+    My PID is: 48007
+    My parent's PID is: 48006
+    I do not have a child
 
 5. p[0] is 3 and p[1] is 4 for both the parent and child processes.
     #include <stdio.h>
@@ -125,6 +154,11 @@ COSC315 Lab 2
         write(p1[1], buff, strlen(buff)+1);
         return 0;
     }
+
+    OUTPUT:
+    Parent said: Have you finished your history homework?
+    Child response: Almost. How did the Vikings send secret message?
+    Parent response: I think it was by Norse Code
 
 7. The output of the program was:
 
