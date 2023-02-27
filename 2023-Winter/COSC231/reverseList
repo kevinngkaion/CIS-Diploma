@@ -1,0 +1,12 @@
+(define l `(2 3 4 5))
+
+(define reverse-list
+  (lambda (l)
+    (reverse-help l `())))
+
+(define reverse-help
+  (lambda (l acc)
+    (if (null? l)
+        acc
+        (reverse-help (cdr l) (cons (car l) acc))
+        )))

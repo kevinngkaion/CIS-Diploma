@@ -1,0 +1,4 @@
+Before fork
+The value of x is 5
+Before fork
+The value of x is 5
