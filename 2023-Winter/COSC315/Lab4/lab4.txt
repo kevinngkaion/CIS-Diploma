@@ -1,0 +1,24 @@
+Kevin Ngkaion
+OC# 300325759
+COSC-315 Lab 4
+
+Question 3:
+a) The first character in a socket's file permissions is an 's'
+b) The name of the socket is #kevinngk
+c) The socket persists even after terminating the receive program,
+
+Question 4:
+The getenv() function returns the value of the environment variable that is passed into it. Instead of passing "LOGNAME", we could also pass in "USER"
+
+Question 5:
+a) The value of SOCK_STREAM is 1 and the value of SOCK_DGRAM is 2
+b) Another type of socket is SOCK_PACKET
+c) Datagram Congestion Control Protocol (DCCP) and Internet Control Message Protocol (ICMP)
+
+Question 6:
+a) The number 7XXX in the programs is the port number.
+b) No. They use different port numbers.
+c) System.out.println(sock.getLocalPort());
+d) I would put the code on line 25 after the connection has been made:
+
+    System.out.println("Host " + client.getInetAddress().getHostAddress() + " has requested the date");

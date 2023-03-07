@@ -1,0 +1,26 @@
+(define code-l `((a b) (b c) (c a)))
+
+(define make-encoder
+  (lambda (code)
+    (lambda (msg-l arg)
+      (if (eqv? `decode arg)
+          (set! code (deep-rev code))
+          (letrec ((encode (lambda (msg-l acc)
+                             (if (null? msg-l)
+                                 acc
+                                 (encode (cdr msg-l) (append acc (cdr (assq (car msg-l) code)) ))
+                                 )
+                             )
+                           ))
+            (encode msg-l `())
+            )
+          )
+      )
+    )
+  )
+
+(define deep-rev `((b a) (c b) (a c)))
+
+(define encoder-1 (make-encoder code-l))
+(encoder-1 '(a b a c a b) `decode)
+
